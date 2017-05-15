@@ -1,6 +1,6 @@
 # Pairing is Caring
 
-* Web app that schedules parings between students.
+* This web app facilitates the scheduling of parings between students.
 
 ## File Structure
 
@@ -23,6 +23,10 @@ project
     └───components
 ```
 
+```
+npm start
+```
+
 ## Desktop Version
 
 ![Desktop Version](./comp/desktop.png)
@@ -31,8 +35,7 @@ project
 
 ![Color Palette](./src/assets/palette.png)
 
-
-## Iterations
+## Iterations (tentative outline: pending revision)
 
 ### Iteration 0
 
@@ -45,32 +48,32 @@ project
 
 #### front-end
 
+- [ ] UI Development
 - [ ] React component structure
-- [ ] Data model flow chart
+- [ ] Data model
 - [ ] Component styles
 - [ ] Dynamic Calendar
 - [ ] Weekly row
 - [ ] Main view
-- [ ] Aside
+- [ ] Aside Nav Bar
 
 #### back-end
 
 - [ ] Data structure
 - [ ] restful API
+- [ ] Build endpoints
 
 ### Iteration 2
 
 #### front-end
 
-- [ ] Data model flow chart
 - [ ] Fetch data from API
 - [ ] Components with data
-- [ ] Add appointment Functionality
-- [ ] Add toggle style
+- [ ] Add appointment functionality
 
 #### back-end
 
-- [ ] Profile Information
+- [ ] Profile information
 - [ ] Authentication
 - [ ] Manage Posts
 
@@ -81,3 +84,4 @@ project
 - [ ] Populate Profiles
 - [ ] Testing
 - [ ] Search Functionality
+- [ ] Tag Functionality
