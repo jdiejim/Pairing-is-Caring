@@ -1,11 +1,14 @@
 .card {
   display: flex;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
   width: 500px;
+  height: 60px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  background-color: #FFF;
   text-align: left; }
   .card h1 {
+    width: 100%;
     margin: 0;
     color: #212121;
     font-size: 20px;
@@ -17,6 +20,24 @@
   font-size: 12px; }
 
 .info {
-  margin: 0 20px 0 10px; }
+  width: 40%;
+  margin: 0 20px; }
+
+.slot-cell {
+  background-color: #FFF;
+  border: 1px solid #BDBDBD;
+  font-weight: 300;
+  font-size: 12px; }
+
+.not-available {
+  color: #BDBDBD; }
+
+.available {
+  background-color: #D1C4E9;
+  color: #212121; }
+
+.paired {
+  background-color: #8CD0C9;
+  color: #212121; }
 
 /*# sourceMappingURL=StudentCard.css.map */

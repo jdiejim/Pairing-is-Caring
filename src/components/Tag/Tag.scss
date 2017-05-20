@@ -3,8 +3,10 @@
 .tag {
   padding: 5px;
   margin: 2px;
-  background-color: $accent-color;
+  background-color: #FFF;
+  border: 1px solid #EFEFEF;
   border-radius: 2px;
-  color: #FFF;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.16);
+  color: $primary-text-color;
   font-size: 10px;
 }

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAEA,YAAa;EACX,KAAK,EAAE,GAAG;EACV,OAAO,EAAE,GAAG;EACZ,gBAAgB,ECLK,OAAO;EDM5B,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,iBAAK;IACH,SAAS,EAAE,IAAI",
+"sources": ["StudentList.scss","../../utilities/_palette.scss"],
 "names": [],
 "file": "StudentList.css"
 }

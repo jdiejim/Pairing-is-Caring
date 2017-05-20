@@ -1,4 +1,7 @@
 .tag-list {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: flex-end; }
 
 /*# sourceMappingURL=TagList.css.map */

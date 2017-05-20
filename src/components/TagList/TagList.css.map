@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,SAAU;EACR,OAAO,EAAE,IAAI",
+"mappings": "AAAA,SAAU;EACR,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,GAAG;EACV,eAAe,EAAE,QAAQ",
 "sources": ["TagList.scss"],
 "names": [],
 "file": "TagList.css"

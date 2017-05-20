@@ -1,8 +1,9 @@
 class Student {
-  constructor(name, slack, tags) {
+  constructor(name, slack, tags, slots) {
     this.name = name;
     this.slack = slack;
     this.tags = tags;
+    this.slots = slots;
   }
 }
 
