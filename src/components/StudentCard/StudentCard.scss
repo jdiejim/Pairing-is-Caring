@@ -1,0 +1,26 @@
+@import "../../utilities/palette";
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 500px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  text-align: left;
+  h1 {
+    margin: 0;
+    color: $primary-text-color;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+.slack {
+  margin: 0;
+  color: $secondary-text-color;
+  font-size: 12px;
+}
+
+.info {
+  margin: 0 20px 0 10px;
+}
