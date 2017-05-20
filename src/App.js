@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import StudentList from './components/StudentList/StudentList';
 import Student from './model/Student';
-import {getTags, getSlots, getSlackUsername, namesObjectGenerator} from './helpers/nameGenerator';
+import {getRandomNumber, getTags, getSlots, getSlackUsername, namesObjectGenerator} from './helpers/nameGenerator';
 import names from './helpers/names';
 import './App.css';
 
 let namesObj = namesObjectGenerator(5, names);
 
 let students = namesObj.map(e => {
-  return new Student(e, getSlackUsername(e), getTags(), getSlots());
+  return new Student(e, getSlackUsername(e), getTags(), getSlots(), getRandomNumber(4));
 });
 
 class App extends Component {
