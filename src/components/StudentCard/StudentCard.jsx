@@ -18,19 +18,19 @@ function StudentCard({student}) {
   }
 
   return (
-    <tr>
-      <td className='card'>
+    <article className='card'>
+      <section className='student-description'>
         <div className='profile-pic' style={profilePic}></div>
         <div className='info'>
           <h1>{student.name}</h1>
           <p className='slack'>{student.slack}</p>
         </div>
         <TagList tags={student.tags} />
-      </td>
+      </section>
       <Slot slot={student.slots[0]} />
       <Slot slot={student.slots[1]} />
       <Slot slot={student.slots[2]} />
-    </tr>
+    </article>
   )
 }
 

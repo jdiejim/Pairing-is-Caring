@@ -1,12 +1,34 @@
 @import "../../utilities/palette";
 
+.student-list {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.card-container-header {
+  display: flex;
+  flex-grow: wrap;
+}
+
+.empty-card {
+  width: 60%;
+  padding: 0 20px;
+  border-right: 1px solid #EFEFEF;
+}
+
 .slot-header {
   width: 15%;
-  padding: 8px;
+  height: 88px;
   background-color: $primary-color-dark;
   color: #FFF;
-  font-size: 35px;
+  border: 1px solid #EFEFEF;
   font-weight: 100;
+  p {
+    margin: 0;
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+  }
   span {
     font-size: 12px;
   }

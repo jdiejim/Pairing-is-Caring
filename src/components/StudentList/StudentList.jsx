@@ -6,19 +6,15 @@ function StudentList({students}) {
   let studentCards = students.map((e, i) => <StudentCard key={i} student={e} />)
 
   return (
-    <table>
-      <thead>
-        <tr className='table-header'>
-          <th className='empty-header'></th>
-          <th className='slot-header'>8<span>am</span></th>
-          <th className='slot-header'>12<span>pm</span></th>
-          <th className='slot-header'>4<span>pm</span></th>
-        </tr>
-      </thead>
-      <tbody>
-        {studentCards}
-      </tbody>
-    </table>
+    <section className='student-list'>
+      <header className='card-container-header'>
+        <article className='empty-card'></article>
+        <article className='slot-header'><p>8<span>am</span></p></article>
+        <article className='slot-header'><p>12<span>pm</span></p></article>
+        <article className='slot-header'><p>4<span>pm</span></p></article>
+      </header>
+      {studentCards}
+    </section>
   )
 }
 

@@ -3,7 +3,9 @@ import './Slot.css'
 
 function Slot({slot}) {
   return (
-    <td className={`slot-cell ${slot.class}`}>{slot.text}</td>
+    <article className={`slot-cell ${slot.class}`}>
+      <p>{slot.text}</p>
+    </article>
   )
 }
 
