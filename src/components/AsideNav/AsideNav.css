@@ -1,8 +1,9 @@
 aside {
   display: flex;
   flex-direction: column;
-  width: 220px;
+  width: 250px;
   height: 1000px;
+  margin-right: 10px;
   background-color: #3D4655; }
 
 .nav {
