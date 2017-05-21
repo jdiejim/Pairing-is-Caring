@@ -1,0 +1,23 @@
+@import "../../utilities/palette";
+
+.slot-cell {
+  background-color: #FFF;
+  border: 1px solid $divider-color;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+}
+
+.not-available {
+  color: $divider-color;
+}
+
+.available {
+  background-color: $primary-color-light;
+  color: $primary-text-color;
+}
+
+.paired {
+  background-color: $paired-color;
+  color: $primary-text-color;
+}

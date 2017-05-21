@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Aside from './components/AsideNav/AsideNav';
 import StudentList from './components/StudentList/StudentList';
 import Student from './model/Student';
 import {getRandomNumber, getTags, getSlots, getSlackUsername, namesObjectGenerator} from './helpers/nameGenerator';
@@ -15,6 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <Aside />
         <StudentList students={students} />
       </div>
     );

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="19px" viewBox="0 0 10 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-27.000000, -23.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="aside">
+                <g id="calendar_section">
+                    <g id="calendar" transform="translate(16.000000, 16.000000)">
+                        <g id="month">
+                            <g id="left">
+                                <g id="left-arrow" transform="translate(11.200000, 7.200000)">
+                                    <path d="M1.12761905,18.1326496 C1.00571429,18.2584615 0.853333333,18.3213675 0.685714286,18.3213675 C0.518095238,18.3213675 0.365714286,18.2584615 0.243809524,18.1326496 C2.20656826e-15,17.8810256 2.20656826e-15,17.4721368 0.243809524,17.2205128 L8.0152381,9.2 L0.243809524,1.17948718 C1.12410081e-15,0.927863248 1.12410081e-15,0.518974359 0.243809524,0.267350427 C0.487619048,0.0157264957 0.883809524,0.0157264957 1.12761905,0.267350427 L9.34095238,8.74393162 C9.5847619,8.99555556 9.5847619,9.40444444 9.34095238,9.65606838 L1.12761905,18.1326496 L1.12761905,18.1326496 Z" id="Shape" transform="translate(4.792381, 9.200000) scale(-1, -1) translate(-4.792381, -9.200000) "></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

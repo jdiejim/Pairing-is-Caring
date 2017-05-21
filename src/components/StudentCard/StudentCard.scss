@@ -18,6 +18,14 @@
   }
 }
 
+.profile-pic {
+  width: 10%;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .slack {
   margin: 0;
   color: $secondary-text-color;
@@ -27,25 +35,4 @@
 .info {
   width: 40%;
   margin: 0 20px;
-}
-
-.slot-cell {
-  background-color: #FFF;
-  border: 1px solid $divider-color;
-  font-weight: 300;
-  font-size: 12px;
-}
-
-.not-available {
-  color: $divider-color;
-}
-
-.available {
-  background-color: $primary-color-light;
-  color: $primary-text-color;
-}
-
-.paired {
-  background-color: $paired-color;
-  color: $primary-text-color;
 }

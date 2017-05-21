@@ -1,0 +1,40 @@
+@import "../../utilities/palette";
+
+.calendar {
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  background-color: $primary-color-dark;
+}
+
+.month {
+  margin: 0;
+  color: #FFF;
+  font-weight: lighter;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.day-name {
+  padding: 5px;
+  color: #FFF;
+  font-size: 12px;
+  text-align: center;
+}
+
+.day {
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;
+}
+
+.out-of-range {
+  color: rgba(#FFF, 0.3);
+}

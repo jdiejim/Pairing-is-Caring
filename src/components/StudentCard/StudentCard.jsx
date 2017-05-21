@@ -1,5 +1,6 @@
 import React from 'react';
-import TagList from '../TagList/TagList'
+import TagList from '../TagList/TagList';
+import Slot from '../Slot/Slot';
 import pic1 from '../../assets/user1.svg';
 import pic2 from '../../assets/user2.svg';
 import pic3 from '../../assets/user3.svg';
@@ -13,27 +14,22 @@ function StudentCard({student}) {
   let pic = pics[student.profile];
 
   const profilePic = {
-    width: '10%',
-    height: 50,
     backgroundImage: `url(${pic})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundSize: 'contain',
   }
 
   return (
     <tr>
       <td className='card'>
-        <div style={profilePic}></div>
+        <div className='profile-pic' style={profilePic}></div>
         <div className='info'>
           <h1>{student.name}</h1>
           <p className='slack'>{student.slack}</p>
         </div>
         <TagList tags={student.tags} />
       </td>
-      <td className={`slot-cell ${student.slots[0].class}`}>{student.slots[0].text}</td>
-      <td className={`slot-cell ${student.slots[1].class}`}>{student.slots[1].text}</td>
-      <td className={`slot-cell ${student.slots[2].class}`}>{student.slots[2].text}</td>
+      <Slot slot={student.slots[0]} />
+      <Slot slot={student.slots[1]} />
+      <Slot slot={student.slots[2]} />
     </tr>
   )
 }

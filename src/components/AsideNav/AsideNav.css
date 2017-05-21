@@ -1,0 +1,22 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  height: 1000px;
+  background-color: #3D4655; }
+
+.nav {
+  margin: 5px 0; }
+
+.nav-link {
+  display: block;
+  padding: 20px;
+  color: #FFF;
+  border-left: 1px solid #3D4655;
+  font-size: 20px;
+  font-weight: lighter; }
+  .nav-link:hover {
+    background-color: #455161;
+    border-left: 1px solid #FFF; }
+
+/*# sourceMappingURL=AsideNav.css.map */

@@ -1,0 +1,19 @@
+.slot-cell {
+  background-color: #FFF;
+  border: 1px solid #BDBDBD;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center; }
+
+.not-available {
+  color: #BDBDBD; }
+
+.available {
+  background-color: #D1C4E9;
+  color: #212121; }
+
+.paired {
+  background-color: #8CD0C9;
+  color: #212121; }
+
+/*# sourceMappingURL=Slot.css.map */
