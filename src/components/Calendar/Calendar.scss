@@ -39,9 +39,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 14%;
+  width: 10%;
   height: 22px;
-  padding: 5px;
+  padding: 3px;
   color: #FFF;
   p {
     margin: 0;
@@ -53,10 +53,13 @@
   font-size: 10px;
 }
 
-.out {
-  color: rgba(#FFF, 0.3);
-}
-
 .now {
   background-color: $primary-color-light;
+}
+
+.day-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

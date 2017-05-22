@@ -3,7 +3,9 @@
 aside {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  // width: 280px;
+  min-width: 280px;
+  max-width: 280px;
   height: 1000px;
   margin-right: 10px;
   background-color: $aside-color;

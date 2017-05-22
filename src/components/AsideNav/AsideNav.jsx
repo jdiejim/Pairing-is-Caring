@@ -2,10 +2,10 @@ import React from 'react';
 import Calendar from '../Calendar/Calendar';
 import './AsideNav.css';
 
-function AsideNav() {
+function AsideNav({calendar, handlers, month}) {
   return (
     <aside>
-      <Calendar />
+      <Calendar days={calendar} updateMonth={handlers} monthTitle={month}/>
       <nav className='nav'>
         <a className='nav-link'>Schedule</a>
         <a className='nav-link'>Profile</a>
