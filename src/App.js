@@ -19,10 +19,10 @@ class App extends Component {
     super();
     this.state = {
       today: moment(),
-      todayStatic: moment().format('DD/MM/YYYY'),
+      todayStatic: moment(),
       daysArray: [],
       monthTitle: '',
-      updateMonth: {next: this.nextMonth.bind(this), previous: this.previousMonth.bind(this)}
+      updateMonth: {next: this.nextMonth.bind(this), previous: this.previousMonth.bind(this), select: this.selectDate.bind(this)}
     }
   }
 
@@ -44,14 +44,14 @@ class App extends Component {
     const startingDate = this.getStartingDate();
     const array = [];
 
-    for (let i = 0; i < 35; i++) {
+    for (let i = 0; i < 42; i++) {
       array.push({
         day: startingDate.format('D'),
         month: startingDate.format('M'),
         year: startingDate.format('YYYY'),
-        date: startingDate.format('DD/MM/YYYY'),
+        date: startingDate.format('MM/DD/YYYY'),
         currentMonth: currentMonth,
-        today: this.state.todayStatic
+        today: this.state.todayStatic.format('MM/DD/YYYY')
       });
       startingDate.add(1, 'day');
     }
@@ -78,14 +78,24 @@ class App extends Component {
     })
   }
 
+  selectDate(e) {
+    let selected = e.target.dataset.day;
+
+    this.setState({
+      todayStatic: moment(selected),
+      daysArray: this.getMonthDaysArray(),
+      monthTitle: this.state.today.format('MMMM YYYY')
+    })
+  }
+
   render() {
     return (
       <div className="App">
       <Aside calendar={this.state.daysArray} handlers={this.state.updateMonth} month={this.state.monthTitle} />
         <main className='main'>
           <header className='header'>
-            <h1 className='day-title'>Monday</h1>
-            <p className='date-title'>15 May 2017</p>
+            <h1 className='day-title'>{this.state.todayStatic.format('dddd')}</h1>
+            <p className='date-title'>{this.state.todayStatic.format('D MMMM YYYY')}</p>
           </header>
           <StudentList students={students} />
         </main>

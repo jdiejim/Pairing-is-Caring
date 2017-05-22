@@ -6,7 +6,7 @@ import './Calendar.css'
 
 class Calendar extends Component {
   render() {
-    const days = this.props.days.map((e, i) => <Day key={i} day={e} />)
+    const days = this.props.days.map((e, i) => <Day key={i} day={e} selectDate={this.props.updateMonth.select}/>)
 
     const leftArrow = {
       backgroundImage: `url(${left})`
