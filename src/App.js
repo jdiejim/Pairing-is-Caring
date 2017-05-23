@@ -17,11 +17,6 @@ class App extends Component {
       daysArray: [],
       monthTitle: '',
       students: [],
-      handlers: {
-        next: this.nextMonth.bind(this),
-        previous: this.previousMonth.bind(this),
-        select: this.selectDate.bind(this)
-      }
     }
   }
 
@@ -39,7 +34,7 @@ class App extends Component {
     return date.subtract(date.format('e'), 'day');
   }
 
-  getMonthDaysArray() {
+  getMonthDaysArray(today) {
     const currentMonth = this.state.today.format('M');
     const startingDate = this.getStartingDate();
     const array = [];
@@ -50,8 +45,8 @@ class App extends Component {
         month: startingDate.format('M'),
         year: startingDate.format('YYYY'),
         date: startingDate.format('MM/DD/YYYY'),
-        currentMonth: currentMonth,
-        today: this.state.todayStatic.format('MM/DD/YYYY')
+        currentMonth,
+        today: today ? today.format('MM/DD/YYYY') : this.state.todayStatic.format('MM/DD/YYYY')
       });
       startingDate.add(1, 'day');
     }
@@ -80,18 +75,20 @@ class App extends Component {
 
   selectDate(e) {
     let selected = e.target.dataset.day;
+    console.log(selected);
+    console.log(this.getMonthDaysArray());
     let array = [...e.target.classList]
 
     this.setState({
       todayStatic: moment(selected),
-      daysArray: this.getMonthDaysArray(),
+      daysArray: this.getMonthDaysArray(moment(selected)),
       monthTitle: this.state.today.format('MMMM YYYY'),
       students: this.getStudents()
     })
 
-    if (!array.includes('now')) {
-      e.target.classList.add('now')
-    }
+    // if (!array.includes('now')) {
+    //   e.target.classList.add('now')
+    // }
   }
 
   getStudents() {
@@ -103,7 +100,13 @@ class App extends Component {
   }
 
   render() {
-    const {daysArray, handlers, monthTitle, todayStatic, students} = this.state;
+    const {daysArray, monthTitle, todayStatic, students} = this.state;
+
+    const handlers=  {
+      next: this.nextMonth.bind(this),
+      previous: this.previousMonth.bind(this),
+      select: this.selectDate.bind(this)
+    }
 
     return (
       <div className="App">
