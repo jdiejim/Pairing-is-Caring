@@ -22,21 +22,30 @@ export function getTags() {
     'DOM',
     'Ruby',
     'Rails',
+    'Python',
+    'git',
+    'npm',
+    'node.js',
+    'atom',
+    'prototypes'
   ]
 
   const array = [];
-  const len = getRandomNumber(9);
+  const len = getRandomNumber(tags.length - 1, 1);
 
   for (let i = 0; i < len; i++) {
-    array.push(tags[i]);
+    let tag = tags[getRandomNumber(len)];
+    if (!array.includes(tag)) {
+      array.push(tag);
+    }
   }
 
   return array;
 }
 
-export function namesObjectGenerator(n, names) {
+export function namesObjectGenerator(names) {
   let array = [];
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < getRandomNumber(15, 1); i++) {
     array.push(nameGenerator(names));
   }
   return array;
@@ -53,4 +62,8 @@ export function getSlots() {
   }
 
   return array;
+}
+
+export function getStudentInfo(name) {
+  return [name, getSlackUsername(name), getTags(), getSlots(), getRandomNumber(7)]
 }

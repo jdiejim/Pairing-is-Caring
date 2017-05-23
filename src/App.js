@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import Aside from './components/AsideNav/AsideNav';
-import StudentList from './components/StudentList/StudentList';
+import {getStudentInfo, namesObjectGenerator} from './helpers/nameGenerator';
 import Student from './model/Student';
-import {getRandomNumber, getTags, getSlots, getSlackUsername, namesObjectGenerator} from './helpers/nameGenerator';
 import names from './helpers/names';
-import './helpers/dateHelpers';
+import Aside from './components/AsideNav/AsideNav';
+import MainHeader from './components/MainHeader/MainHeader';
+import StudentList from './components/StudentList/StudentList';
 import './App.css';
-
-let namesObj = namesObjectGenerator(5, names);
-
-let students = namesObj.map(e => {
-  return new Student(e, getSlackUsername(e), getTags(), getSlots(), getRandomNumber(4));
-});
 
 class App extends Component {
   constructor() {
@@ -22,14 +16,20 @@ class App extends Component {
       todayStatic: moment(),
       daysArray: [],
       monthTitle: '',
-      updateMonth: {next: this.nextMonth.bind(this), previous: this.previousMonth.bind(this), select: this.selectDate.bind(this)}
+      students: [],
+      handlers: {
+        next: this.nextMonth.bind(this),
+        previous: this.previousMonth.bind(this),
+        select: this.selectDate.bind(this)
+      }
     }
   }
 
   componentDidMount() {
     this.setState({
       daysArray: this.getMonthDaysArray(),
-      monthTitle: this.state.today.format('MMMM YYYY')
+      monthTitle: this.state.today.format('MMMM YYYY'),
+      students: this.getStudents()
     })
   }
 
@@ -58,7 +58,7 @@ class App extends Component {
     return array;
   }
 
-  nextMonth(e) {
+  nextMonth() {
     let next = this.state.today.add(1, 'month');
 
     this.setState({
@@ -68,7 +68,7 @@ class App extends Component {
     })
   }
 
-  previousMonth(e) {
+  previousMonth() {
     let previous = this.state.today.subtract(1, 'month');
 
     this.setState({
@@ -80,24 +80,37 @@ class App extends Component {
 
   selectDate(e) {
     let selected = e.target.dataset.day;
+    let array = [...e.target.classList]
 
     this.setState({
       todayStatic: moment(selected),
       daysArray: this.getMonthDaysArray(),
-      monthTitle: this.state.today.format('MMMM YYYY')
+      monthTitle: this.state.today.format('MMMM YYYY'),
+      students: this.getStudents()
     })
+
+    if (!array.includes('now')) {
+      e.target.classList.add('now')
+    }
+  }
+
+  getStudents() {
+    let namesObj = namesObjectGenerator(names);
+
+    let array = namesObj.map(e => new Student(...getStudentInfo(e)));
+
+    return array;
   }
 
   render() {
+    const {daysArray, handlers, monthTitle, todayStatic, students} = this.state;
+
     return (
       <div className="App">
-      <Aside calendar={this.state.daysArray} handlers={this.state.updateMonth} month={this.state.monthTitle} />
+      <Aside calendar={daysArray} handlers={handlers} month={monthTitle} />
         <main className='main'>
-          <header className='header'>
-            <h1 className='day-title'>{this.state.todayStatic.format('dddd')}</h1>
-            <p className='date-title'>{this.state.todayStatic.format('D MMMM YYYY')}</p>
-          </header>
-          <StudentList students={students} />
+          <MainHeader today={todayStatic} />
+          <StudentList studentRoster={students} />
         </main>
       </div>
     );

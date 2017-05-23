@@ -2,8 +2,8 @@ import React from 'react';
 import StudentCard from '../StudentCard/StudentCard';
 import './StudentList.css'
 
-function StudentList({students}) {
-  let studentCards = students.map((e, i) => <StudentCard key={i} student={e} />)
+function StudentList({studentRoster}) {
+  let studentCards = studentRoster.map((e, i) => <StudentCard key={i} student={e} />)
 
   return (
     <section className='student-list'>

@@ -5,8 +5,10 @@
   width: 10%;
   height: 22px;
   padding: 4px;
-  color: #FFF; }
-  .days p {
+  color: #FFF;
+  cursor: pointer;
+  font-size: 12px; }
+  .days span {
     margin: 0;
     font-size: 12px; }
 
