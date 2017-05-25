@@ -1,6 +1,6 @@
 import React from 'react';
-import left from '../../assets/left-arrow.svg';
-import right from '../../assets/right-arrow.svg';
+import left from '../../../assets/left-arrow.svg';
+import right from '../../../assets/right-arrow.svg';
 import './CalendarHeader.css';
 
 function CalendarHeader({handlers, monthTitle}) {

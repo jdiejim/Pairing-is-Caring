@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import {getStudentInfo, namesObjectGenerator} from './helpers/nameGenerator';
-import Student from './model/Student';
-import names from './helpers/names';
+import {getStudentInfo, namesObjectGenerator} from '../helpers/nameGenerator';
+import Student from '../model/Student';
+import names from '../helpers/names';
 import Aside from './components/AsideNav/AsideNav';
 import MainHeader from './components/MainHeader/MainHeader';
 import StudentList from './components/StudentList/StudentList';

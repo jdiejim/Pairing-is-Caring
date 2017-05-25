@@ -1,5 +1,5 @@
 import React from 'react';
-import signInPic from '../../assets/sign-in.svg';
+import signInPic from '../../../assets/sign-in.svg';
 import './MainHeader.css';
 
 function MainHeader({today}) {
