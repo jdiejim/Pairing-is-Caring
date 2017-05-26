@@ -1,5 +1,8 @@
+@import "../../utilities/palette";
+
 .mentor-card {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: 10px;
   margin: 5px 0;
@@ -8,8 +11,63 @@
 }
 
 .contact-info {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
 }
+
+.bio-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
 .bio {
-  width: 50%;
+  margin: 10px 0;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.bio-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.name {
+  margin: 20px 5px 0;
+  color: $primary-text-color;
+  font-size: 25px;
+}
+
+.slack {
+  margin: 0 5px 0;
+  color: $secondary-text-color;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.location {
+  margin: 0;
+  color: $primary-text-color;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: right;
+}
+
+.job-title {
+  margin: 0 5px 0;
+  color: $secondary-text-color;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.availability {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0 0;
+  border: 1px solid $divider-color;
+  color: $secondary-text-color;
+  font-size: 12px;
 }
