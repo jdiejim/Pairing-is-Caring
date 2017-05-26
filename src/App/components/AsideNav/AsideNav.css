@@ -15,7 +15,8 @@ aside {
   border-left: 3px solid #3D4655;
   cursor: pointer;
   font-size: 20px;
-  font-weight: lighter; }
+  font-weight: lighter;
+  text-decoration: none; }
 
 .active-link {
   background-color: #455161;

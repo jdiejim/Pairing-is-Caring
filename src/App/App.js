@@ -4,8 +4,7 @@ import {getStudentInfo, namesObjectGenerator} from '../helpers/nameGenerator';
 import Student from '../model/Student';
 import names from '../helpers/names';
 import Aside from './components/AsideNav/AsideNav';
-import MainHeader from './components/MainHeader/MainHeader';
-import StudentList from './components/StudentList/StudentList';
+import Schedule from './components/Schedule/Schedule';
 import './App.css';
 
 class App extends Component {
@@ -77,7 +76,7 @@ class App extends Component {
     let selected = e.target.dataset.day;
     console.log(selected);
     console.log(this.getMonthDaysArray());
-    let array = [...e.target.classList]
+    // let array = [...e.target.classList]
 
     this.setState({
       todayStatic: moment(selected),
@@ -111,10 +110,7 @@ class App extends Component {
     return (
       <div className="App">
       <Aside calendar={daysArray} handlers={handlers} month={monthTitle} />
-        <main className='main'>
-          <MainHeader today={todayStatic} />
-          <StudentList studentRoster={students} />
-        </main>
+      <Schedule today={todayStatic} students={students} />
       </div>
     );
   }
