@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAEA,IAAK;EACH,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,GAAG;EACX,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,iBAAiB;EACzB,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,+BAA+B;EAC3C,KAAK,ECHgB,OAAO;EDI5B,SAAS,EAAE,IAAI",
-"sources": ["Tag.scss","../../utilities/_palette.scss"],
+"mappings": "AAEA,IAAK;EACH,OAAO,EAAE,QAAQ;EACjB,MAAM,EAAE,GAAG;EACX,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,iBAAiB;EACzB,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,+BAA+B;EAC3C,KAAK,ECHgB,OAAO;EDI5B,SAAS,EAAE,IAAI",
+"sources": ["Tag.scss","../../../utilities/_palette.scss"],
 "names": [],
 "file": "Tag.css"
 }

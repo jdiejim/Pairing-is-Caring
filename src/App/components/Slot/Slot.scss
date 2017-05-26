@@ -26,3 +26,14 @@
   background-color: $paired-color;
   color: $primary-text-color;
 }
+
+.clicked {
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-color: $paired-color;
+  color: $primary-text-color;
+  h1 {
+    margin-top: 75px;
+  }
+}

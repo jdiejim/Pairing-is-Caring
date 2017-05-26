@@ -21,4 +21,13 @@
   background-color: #8CD0C9;
   color: #212121; }
 
+.clicked {
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-color: #8CD0C9;
+  color: #212121; }
+  .clicked h1 {
+    margin-top: 75px; }
+
 /*# sourceMappingURL=Slot.css.map */

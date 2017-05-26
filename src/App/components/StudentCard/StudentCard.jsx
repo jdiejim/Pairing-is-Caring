@@ -13,7 +13,7 @@ import './StudentCard.css';
 
 const pics = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8];
 
-function StudentCard({student}) {
+function StudentCard({student, handlers}) {
   let pic = pics[student.profile];
 
   const profilePic = {
@@ -30,9 +30,9 @@ function StudentCard({student}) {
         </div>
         <TagList tags={student.tags} />
       </section>
-      <Slot slot={student.slots[0]} />
-      <Slot slot={student.slots[1]} />
-      <Slot slot={student.slots[2]} />
+      <Slot slot={student.slots[0]} handlers={handlers} />
+      <Slot slot={student.slots[1]} handlers={handlers} />
+      <Slot slot={student.slots[2]} handlers={handlers} />
     </article>
   )
 }

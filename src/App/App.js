@@ -5,7 +5,10 @@ import Student from '../model/Student';
 import names from '../data/names';
 import Aside from './components/AsideNav/AsideNav';
 import Schedule from './components/Schedule/Schedule';
+import pic from '../assets/user2.svg';
 import './App.css';
+
+let user = 'Juan Jimenez'
 
 class App extends Component {
   constructor() {
@@ -98,19 +101,33 @@ class App extends Component {
     return array;
   }
 
+  reserveSlot(e) {
+    let classList = e.target.classList;
+    if (classList.contains('available')) {
+      e.target.classList.add('clicked');
+      e.target.classList.remove('available');
+      e.target.innerHTML = `<h1>${user}</h1>`;
+      e.target.style.backgroundImage = `url(${pic})`;
+      // e.target.children[0].innerText = '';
+      console.log(e.target.children);
+      console.log(e.target.classList);
+    }
+  }
+
   render() {
     const {daysArray, monthTitle, todayStatic, students} = this.state;
 
     const handlers=  {
       next: this.nextMonth.bind(this),
       previous: this.previousMonth.bind(this),
-      select: this.selectDate.bind(this)
+      select: this.selectDate.bind(this),
+      reserve: this.reserveSlot.bind(this)
     }
 
     return (
       <div className="App">
         <Aside calendar={daysArray} handlers={handlers} month={monthTitle} />
-        <Schedule today={todayStatic} students={students} />
+        <Schedule today={todayStatic} students={students} handlers={handlers} />
       </div>
     );
   }
