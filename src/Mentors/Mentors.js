@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import { getStudentInfo, namesObjectGenerator } from '../helpers/nameGenerator';
 import Mentor from '../model/Mentor';
 import MENTORS from '../data/mentorsDB';
 import Aside from './components/AsideNav/AsideNav';
@@ -15,7 +14,8 @@ class Mentors extends Component {
       todayStatic: moment(),
       daysArray: [],
       monthTitle: '',
-      mentors: MENTORS.map(e => new Mentor(e))
+      mentors: MENTORS.map(e => new Mentor(e)),
+      search: ''
     }
   }
 
@@ -71,18 +71,39 @@ class Mentors extends Component {
     })
   }
 
+  searchMentor(event) {
+    let value = event.target.value;
+    let mentors = this.state.mentors.filter(e => {
+      console.log(e.tags.map(t => t.toLowerCase()).join(' '));
+      return e.name.toLowerCase().includes(value) ||
+             e.location.toLowerCase().includes(value) ||
+             e.tags.map(t => t.toLowerCase()).join(' ').includes(value);
+    });
+
+    if (value === '') {
+      this.setState({
+        mentors: MENTORS.map(e => new Mentor(e))
+      })
+    } else {
+      this.setState({
+        mentors: mentors
+      })
+    }
+  }
+
   render() {
     const {daysArray, monthTitle, todayStatic, mentors} = this.state;
 
     const handlers=  {
       next: this.nextMonth.bind(this),
       previous: this.previousMonth.bind(this),
+      searchMentor: this.searchMentor.bind(this)
     }
 
     return (
       <div className="Mentors">
         <Aside calendar={daysArray} handlers={handlers} month={monthTitle} />
-        <MentorsMain today={todayStatic} mentors={mentors} />
+        <MentorsMain today={todayStatic} handlers={handlers} mentors={mentors} />
       </div>
     );
   }

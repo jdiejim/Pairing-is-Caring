@@ -31,3 +31,9 @@
 .username {
   color: $primary-color-dark;
 }
+
+.login-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

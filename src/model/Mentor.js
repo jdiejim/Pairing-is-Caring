@@ -4,7 +4,7 @@ class Mentor {
     this.slack = obj['Slack'];
     this.email = obj['Email'];
     this.phone = obj['Phone'];
-    this.tags = obj['Technical'].split(',');
+    this.tags = obj['Technical'].split(',').map(e => e.trim());
     this.location = obj['Location'];
     this.preferred = obj['Preferred'];
     this.jobTitle = obj['JobTitle'];

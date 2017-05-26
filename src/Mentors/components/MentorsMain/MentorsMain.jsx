@@ -3,10 +3,10 @@ import MainHeader from '../MainHeader/MainHeader';
 import MentorsList from '../MentorsList/MentorsList';
 import './MentorsMain.css';
 
-function MentorsMain({today, mentors}) {
+function MentorsMain({today, handlers, mentors}) {
   return (
     <main className='main'>
-      <MainHeader today={today} />
+      <MainHeader today={today} handlers={handlers} />
       <MentorsList mentors={mentors} />
     </main>
   )

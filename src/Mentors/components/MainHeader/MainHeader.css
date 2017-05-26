@@ -25,4 +25,9 @@
 .username {
   color: #512DA8; }
 
+.login-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+
 /*# sourceMappingURL=MainHeader.css.map */
