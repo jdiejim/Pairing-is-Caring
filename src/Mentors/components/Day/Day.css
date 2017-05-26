@@ -1,0 +1,21 @@
+.days {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 22px;
+  padding: 4px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 12px; }
+  .days span {
+    margin: 0;
+    font-size: 12px; }
+
+.out {
+  color: rgba(255, 255, 255, 0.3); }
+
+.now {
+  background-color: #D1C4E9; }
+
+/*# sourceMappingURL=Day.css.map */

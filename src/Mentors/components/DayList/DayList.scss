@@ -1,0 +1,30 @@
+.days-week {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 22px;
+  padding: 3px;
+  color: #FFF;
+  p {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+.day-name {
+  font-size: 10px;
+}
+
+.day-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

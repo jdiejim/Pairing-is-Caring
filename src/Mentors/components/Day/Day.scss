@@ -1,0 +1,25 @@
+@import "../../utilities/palette";
+
+.days {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 22px;
+  padding: 4px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 12px;
+  span {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+.out {
+  color: rgba(#FFF, 0.3);
+}
+
+.now {
+  background-color: $primary-color-light;
+}

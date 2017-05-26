@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import { getStudentInfo, namesObjectGenerator } from '../helpers/nameGenerator';
-import Student from '../model/Student';
-import names from '../data/names';
+import Mentor from '../model/Mentor';
+import MENTORS from '../data/mentorsDB';
 import Aside from './components/AsideNav/AsideNav';
-import Schedule from './components/Schedule/Schedule';
-import './App.css';
+import MentorsMain from './components/MentorsMain/MentorsMain';
+import './Mentors.css';
 
-class App extends Component {
+class Mentors extends Component {
   constructor() {
     super();
     this.state = {
@@ -15,7 +15,7 @@ class App extends Component {
       todayStatic: moment(),
       daysArray: [],
       monthTitle: '',
-      students: [],
+      mentors: MENTORS.map(e => new Mentor(e))
     }
   }
 
@@ -23,7 +23,6 @@ class App extends Component {
     this.setState({
       daysArray: this.getMonthDaysArray(),
       monthTitle: this.state.today.format('MMMM YYYY'),
-      students: this.getStudents()
     })
   }
 
@@ -72,48 +71,21 @@ class App extends Component {
     })
   }
 
-  selectDate(e) {
-    let selected = e.target.dataset.day;
-    console.log(selected);
-    console.log(this.getMonthDaysArray());
-    // let array = [...e.target.classList]
-
-    this.setState({
-      todayStatic: moment(selected),
-      daysArray: this.getMonthDaysArray(moment(selected)),
-      monthTitle: this.state.today.format('MMMM YYYY'),
-      students: this.getStudents()
-    })
-
-    // if (!array.includes('now')) {
-    //   e.target.classList.add('now')
-    // }
-  }
-
-  getStudents() {
-    let namesObj = namesObjectGenerator(names);
-
-    let array = namesObj.map(e => new Student(...getStudentInfo(e)));
-
-    return array;
-  }
-
   render() {
-    const {daysArray, monthTitle, todayStatic, students} = this.state;
+    const {daysArray, monthTitle, todayStatic, mentors} = this.state;
 
     const handlers=  {
       next: this.nextMonth.bind(this),
       previous: this.previousMonth.bind(this),
-      select: this.selectDate.bind(this)
     }
 
     return (
-      <div className="App">
+      <div className="Mentors">
         <Aside calendar={daysArray} handlers={handlers} month={monthTitle} />
-        <Schedule today={todayStatic} students={students} />
+        <MentorsMain today={todayStatic} mentors={mentors} />
       </div>
     );
   }
 }
 
-export default App;
+export default Mentors;

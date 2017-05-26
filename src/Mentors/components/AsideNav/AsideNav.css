@@ -1,0 +1,25 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  min-width: 270px;
+  max-width: 270px;
+  height: 100vh;
+  margin-right: 10px;
+  background-color: #3D4655;
+  position: fixed; }
+
+.nav-link {
+  display: block;
+  padding: 20px;
+  color: #FFF;
+  border-left: 3px solid #3D4655;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: lighter;
+  text-decoration: none; }
+
+.active-link {
+  background-color: #455161;
+  border-left: 3px solid #FFF; }
+
+/*# sourceMappingURL=AsideNav.css.map */
