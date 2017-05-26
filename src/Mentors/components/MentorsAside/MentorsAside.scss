@@ -1,0 +1,28 @@
+@import "../../utilities/palette";
+
+aside {
+  display: flex;
+  flex-direction: column;
+  min-width: 270px;
+  max-width: 270px;
+  height: 100vh;
+  margin-right: 10px;
+  background-color: $aside-color;
+  position: fixed;
+}
+
+.nav-link {
+  display: block;
+  padding: 20px;
+  color: #FFF;
+  border-left: 3px solid $aside-color;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+.active-link {
+  background-color: $active-link;
+  border-left: 3px solid #FFF;
+}

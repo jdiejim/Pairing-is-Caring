@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import {getStudentInfo, namesObjectGenerator} from '../helpers/nameGenerator';
+import { getStudentInfo, namesObjectGenerator } from '../helpers/nameGenerator';
 import Student from '../model/Student';
 import names from '../helpers/names';
 import Aside from './components/AsideNav/AsideNav';
 import Schedule from './components/Schedule/Schedule';
+import Mentors from '../Mentors/Mentors';
 import './App.css';
 
 class App extends Component {
@@ -109,8 +110,8 @@ class App extends Component {
 
     return (
       <div className="App">
-      <Aside calendar={daysArray} handlers={handlers} month={monthTitle} />
-      <Schedule today={todayStatic} students={students} />
+        <Aside calendar={daysArray} handlers={handlers} month={monthTitle} />
+        <Schedule today={todayStatic} students={students} />
       </div>
     );
   }
